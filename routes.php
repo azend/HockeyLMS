@@ -1,7 +1,7 @@
 <?php
 
 $routes = array(
-	'/hello' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get');
+	'/hello' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get')
 
 );
 
