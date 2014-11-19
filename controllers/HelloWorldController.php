@@ -1,7 +1,7 @@
 <?php
 
 class HelloWorldController extends Controller {
-	public index () {
+	function index () {
 		echo 'Hello world';
 	}
 }

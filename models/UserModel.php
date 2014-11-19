@@ -6,7 +6,7 @@ class User {
 }
 
 class UserModel extends Model {
-	public getAllUsers () {
+	function getAllUsers () {
 
 	}
 }
