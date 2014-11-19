@@ -1,9 +1,14 @@
 <?php
 
 // Aggregate all needed files to require
-$includes = array();
-
 $systemIncludes = array('models/Model.php');
 
-print_r(glob("models/*.php"));
+$controllerIncludes = glob("controllers/*.php");
+$modelIncludes = glob("models/*.php");
 
+$includes = array_merge($systemIncludes, $controllerIncludes, $modelIncludes);
+$includes = array_unique($includes);
+
+foreach($includes as $include) {
+	require_once($include);
+}
