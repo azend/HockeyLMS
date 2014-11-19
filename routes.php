@@ -13,6 +13,6 @@ foreach($routes as $route => $opts) {
 		$action = $opts['action'];
 
 		$instance = new $controller();
-		$instance->$action;
+		$instance->$action();
 	}	
 }
