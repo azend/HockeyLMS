@@ -13,8 +13,8 @@ class Controller {
 	}
 
 	private function isolateRender($viewPath) {
-		explode($viewBag);
-		include($viewPath);
+		extract($this->viewBag);
+		include($this->viewPath);
 	}
 
 	private function buildViewFileName($callingInfo) {
