@@ -14,7 +14,7 @@ class Controller {
 
 	private function isolateRender($viewPath) {
 		extract($this->viewBag);
-		include($this->viewPath);
+		include($viewPath);
 	}
 
 	private function buildViewFileName($callingInfo) {
