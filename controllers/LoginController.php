@@ -24,5 +24,8 @@ class LoginController extends Controller {
 		if ($lh->isLoggedIn()) {
 			header('Location: ?path=/dashboard');
 		}
+		else {
+			header('Location: ?path=/login');
+		}
 	}
 }
