@@ -12,7 +12,7 @@ class Controller {
 		}
 	}
 
-	private isolateRender($viewPath) {
+	private function isolateRender($viewPath) {
 		explode($viewBag);
 		include($viewPath);
 	}
