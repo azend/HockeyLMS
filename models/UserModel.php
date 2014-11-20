@@ -24,7 +24,7 @@ class UserModel extends Model {
 	}
 
 	function getUser($email) {
-		$stmt = $db->prepare('SELECT * FROM Users WHERE email = :email COUNT 1');
+		$stmt = $this->db->prepare('SELECT * FROM Users WHERE email = :email COUNT 1');
 		$stmt->execute(array(
 			':email' => $email
 		));
