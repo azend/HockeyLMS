@@ -18,8 +18,11 @@ class LoginController extends Controller {
 		}
 		 */
 
-		$um = new UserModel();
-		print_r($um->find($_POST['email']));
-		echo create_hash($_POST['password']);
+		$lh = new LoginHelper();
+		$lh->login($_POST['email'], $_POST['password']);
+
+		if ($lh->isLoggedIn()) {
+			header('Location: ?path=/dashboard');
+		}
 	}
 }
