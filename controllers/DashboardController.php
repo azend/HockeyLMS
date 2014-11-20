@@ -1,7 +1,11 @@
 <?php
 
 class DashboardController extends Controller {
-	private $lh = new LoginHelper();
+	private $lh = null;
+
+	function __construct() {
+		$this->lh = new LoginHelper();
+	}
 
 	function index () {
 		checkLogin();
