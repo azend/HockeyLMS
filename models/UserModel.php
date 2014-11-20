@@ -1,11 +1,11 @@
 <?php
 
 class UserRoles {
-	public const PARENT = 0;
-	public const PLAYER = 1;
-	public const COACH = 2;
-	public const LEAGUE_ADMIN = 3;
-	public const SYSTEM_ADMIN = 4
+	const PARENT = 0;
+	const PLAYER = 1;
+	const COACH = 2;
+	const LEAGUE_ADMIN = 3;
+	const SYSTEM_ADMIN = 4
 }
 
 class User {
