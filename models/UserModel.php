@@ -5,7 +5,7 @@ class UserRoles {
 	const PLAYER = 1;
 	const COACH = 2;
 	const LEAGUE_ADMIN = 3;
-	const SYSTEM_ADMIN = 4
+	const SYSTEM_ADMIN = 4;
 }
 
 class User {
