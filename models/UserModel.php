@@ -19,11 +19,20 @@ class User {
 }
 
 class UserModel extends Model {
-	function getAllUsers () {
-		
+	function all () {
+		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, passwordSalt, isActivated, userRole FROM Users');
+		$stmt->execute();
+		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+
+		$users = array();
+		while($user =$stmt->fetch()) {
+			$users[] = $user;
+		}
+
+		return $users;
 	}
 
-	function getUser($email) {
+	function find($email) {
 		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, passwordSalt, isActivated, userRole FROM Users WHERE email = :email LIMIT 1');
 		$stmt->execute(array(
 			':email' => $email

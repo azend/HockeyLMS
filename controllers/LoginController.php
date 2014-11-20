@@ -19,6 +19,6 @@ class LoginController extends Controller {
 		 */
 
 		$um = new UserModel();
-		print_r($um->getUser($_POST['email']));
+		print_r($um->find($_POST['email']));
 	}
 }
