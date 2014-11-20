@@ -20,5 +20,6 @@ class LoginController extends Controller {
 
 		$um = new UserModel();
 		print_r($um->find($_POST['email']));
+		echo create_hash($_POST['password']);
 	}
 }
