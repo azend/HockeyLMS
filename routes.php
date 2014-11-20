@@ -1,25 +1,36 @@
 <?php
 
 $routes = array(
-	'/hello' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get')
+	'/hello' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get'),
+	'default' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get'),
+	'error' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get')
 
 );
 
-$controller = 'HelloWorldController';
-$action = 'index';
-$method = 'get';
+$selectedRoute = null;
 
 if (isset($_GET['path']) && !empty($_GET['path'])) {
 	$path = $_GET['path'];
 
 	foreach($routes as $route => $opts) {
 		if ($route === $path) {
-			$controller = $opts['controller'];
-			$action = $opts['action'];
-
-			$instance = new $controller();
-			$instance->$action();
+			$selectedRoute = $route;
 		}	
+		break;
+	}
+
+	if (!$selectedRoute) {
+		$selectedRoute = $routes['error'];
 	}
 
 }
+else {
+	$selectedRoute = $route['default'];
+}
+
+$controller = $selectedRoute['controller'];
+$action = $selectedRoute['action'];
+$method = $selectedRoute['method'];
+
+$instance = new $controller();
+$instance->$action();
