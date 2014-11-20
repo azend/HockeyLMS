@@ -1,7 +1,6 @@
 <?php
 
 class LoginHelper {
-	private $user = null;
 
 	function login($email, $password) {
 		$um = new UserModel();
@@ -10,16 +9,16 @@ class LoginHelper {
 		if ($user) {
 			if (validate_password($password, $user->passwordHash)) {
 				// Logged in
-				$this->user = $user;
+				$_SESSION['user'] = $user;
 			}
 		}
 	}
 
 	function logout() {
-		$this->user = null;
+		$_SESSION['user'] = null;
 	}
 
 	function isLoggedIn() {
-		return $this->user === null;
+		return $_SESSION['user'] === null;
 	}
 }
