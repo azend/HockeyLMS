@@ -8,9 +8,9 @@ class DashboardController extends Controller {
 	}
 
 	function index () {
-		checkLogin();
+		$this->checkLogin();
 
-		render();
+		$this->render();
 	}
 
 	private function checkLogin() {
