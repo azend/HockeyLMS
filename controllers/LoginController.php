@@ -6,6 +6,7 @@ class LoginController extends Controller {
 	}
 
 	function login () {
+		/*
 		$fv = new FormValidator();
 
 		$fv->enforceMethod('POST');
@@ -15,5 +16,9 @@ class LoginController extends Controller {
 		if($fv->validate()) {
 			print_r($_POST);
 		}
+		 */
+
+		$um = new UserModel();
+		print_r($um->getUser($_POST['email']));
 	}
 }
