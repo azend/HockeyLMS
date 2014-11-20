@@ -5,14 +5,21 @@ $routes = array(
 
 );
 
-$path = $_GET['path'];
+$controller = 'HelloWorldController';
+$action = 'index';
+$method = 'get';
 
-foreach($routes as $route => $opts) {
-	if ($route === $path) {
-		$controller = $opts['controller'];
-		$action = $opts['action'];
+if (isset($_GET['path']) && !empty($_GET['path'])) {
+	$path = $_GET['path'];
 
-		$instance = new $controller();
-		$instance->$action();
-	}	
+	foreach($routes as $route => $opts) {
+		if ($route === $path) {
+			$controller = $opts['controller'];
+			$action = $opts['action'];
+
+			$instance = new $controller();
+			$instance->$action();
+		}	
+	}
+
 }
