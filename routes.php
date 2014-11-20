@@ -2,7 +2,7 @@
 
 $routes = array(
 	'/hello' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get'),
-	'/login' => array( 'controller' => 'LoginController', 'action' => 'index', 'method' => 'get'),
+	'/login' => array( 'controller' => 'LoginController', 'action' => 'login', 'method' => 'post'),
 	'default' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get'),
 	'error' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get')
 
