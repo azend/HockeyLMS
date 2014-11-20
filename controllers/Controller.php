@@ -21,7 +21,7 @@ class Controller {
 		return 'views/' . str_replace('Controller', '', $callingInfo['class']) . '/' . $callingInfo['function'] . '.php';
 	}
 
-	private function getCallingFunction() {
+	private function getCallingInfo() {
 		$stack = debug_backtrace();
 		$callingFrame = $stack[2];
 
