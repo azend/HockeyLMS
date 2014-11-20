@@ -17,7 +17,7 @@ if (isset($_GET['path']) && !empty($_GET['path'])) {
 
 	foreach($routes as $route => $opts) {
 		if (isset($opts['path'])) {
-			if $path === $opts['path'] && $method === $opts['method']) {
+			if ($path === $opts['path'] && $method === $opts['method']) {
 				$selectedRoute = $opts;
 				break;
 			}	
