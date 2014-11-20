@@ -15,7 +15,7 @@ class User {
 	public $passwordHash = '';
 	public $passwordSalt = '';
 	public $isActivated = false;
-	public $userRole = UserRoles::PARENT
+	public $userRole = UserRoles::PARENT;
 }
 
 class UserModel extends Model {
