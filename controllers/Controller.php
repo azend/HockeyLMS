@@ -3,15 +3,6 @@
 class Controller {
 	protected $viewBag = array();
 
-	function render() {
-		$functionName = getCallingFunction();
-		$viewFileName = buildViewFileName($functionName);
-		
-		if (file_exists($viewFileName)) {
-			isolateRender($viewFileName);
-		}
-	}
-
 	private function isolateRender($viewPath) {
 		explode($viewBag);
 		include($viewPath);
@@ -27,4 +18,13 @@ class Controller {
 
 		return $stack;
 	}	
+
+	public function render() {
+		$functionName = getCallingFunction();
+		$viewFileName = buildViewFileName($functionName);
+		
+		if (file_exists($viewFileName)) {
+			isolateRender($viewFileName);
+		}
+	}
 }
