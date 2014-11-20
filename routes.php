@@ -12,9 +12,10 @@ $selectedRoute = null;
 
 if (isset($_GET['path']) && !empty($_GET['path'])) {
 	$path = $_GET['path'];
+	$method = strtolower($_SERVER['REQUEST_METHOD']);
 
 	foreach($routes as $route => $opts) {
-		if ($route === $path) {
+		if ($route === $path && $method === $opts->method) {
 			$selectedRoute = $opts;
 			break;
 		}	
