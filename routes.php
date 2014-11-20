@@ -25,7 +25,7 @@ if (isset($_GET['path']) && !empty($_GET['path'])) {
 
 }
 else {
-	$selectedRoute = $route['default'];
+	$selectedRoute = $routes['default'];
 }
 
 $controller = $selectedRoute['controller'];
