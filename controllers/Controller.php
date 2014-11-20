@@ -18,7 +18,7 @@ class Controller {
 	}
 
 	private function buildViewFileName($functionName) {
-		return '../views/' . $functionName . '.php';
+		return 'views/' . $functionName . '.php';
 	}
 
 	private function getCallingFunction() {
