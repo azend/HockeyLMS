@@ -14,7 +14,7 @@ class DashboardController extends Controller {
 	}
 
 	private function checkLogin() {
-		if (!$lh->isLoggedIn()) {
+		if (!$this->lh->isLoggedIn()) {
 			header('Location: ?path=/login');
 			die();
 		}
