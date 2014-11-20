@@ -4,8 +4,8 @@ class Controller {
 	protected $viewBag = array();
 
 	public function render() {
-		$functionName = $this->getCallingFunction();
-		$viewFileName = $this->buildViewFileName($functionName);
+		$callingInfo = $this->getCallingInfo();
+		$viewFileName = $this->buildViewFileName($callingInfo);
 		
 		if (file_exists($viewFileName)) {
 			$this->isolateRender($viewFileName);
@@ -17,14 +17,14 @@ class Controller {
 		include($viewPath);
 	}
 
-	private function buildViewFileName($functionName) {
-		return 'views/' . $functionName . '.php';
+	private function buildViewFileName($callingInfo) {
+		return 'views/' . str_replace('Controller', '', $callingInfo['class']) . '/' . $callingInfo['function'] . '.php';
 	}
 
 	private function getCallingFunction() {
 		$stack = debug_backtrace();
-		$callingFunction = $stack[2]['function'];
+		$callingFrame = $stack[2];
 
-		return $callingFunction;
+		return array('function' => $callingFrame['function'], 'class' => $callingFrame['class']);
 	}	
 }
