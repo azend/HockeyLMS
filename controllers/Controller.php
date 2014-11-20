@@ -25,6 +25,6 @@ class Controller {
 		$stack = debug_backtrace();
 		$callingFunction = $stack[2]['function'];
 
-		return $stack;
+		return $callingFunction;
 	}	
 }
