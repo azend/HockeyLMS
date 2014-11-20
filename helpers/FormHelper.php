@@ -104,13 +104,3 @@ class FormValidator {
 	}
 }
 
-// Debug ofc
-if ( isHttpGet() ) { ?>
-
-<form action="" method="POST">
-	<input id="deviceId" name="deviceId" type="text">
-	<input id="status" name="status" type="text">
-	<input type="submit" value="Push status">
-</form>
-
-<?php }
