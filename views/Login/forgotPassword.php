@@ -81,6 +81,7 @@
       <form class="form-signin" role="form" action="?path=/login" method="post">
         <h2 class="form-signin-heading">Enter reset code</h2>
 	<p>Your reset code has been sent. Please enter it below.</p>
+	<input type="hidden" name="email" id="email" value="<?php echo $user->email; ?>" />
         <label for="inputResetCode" class="sr-only">Reset code</label>
         <input type="text" id="inputResetCode" name="inputResetCode" class="form-control" placeholder="Reset Code" required autofocus>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Reset</button>
