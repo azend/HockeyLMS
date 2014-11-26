@@ -45,7 +45,7 @@ class LoginController extends Controller {
 			$_SESSION['passwordResetCode'] = $r;
 
 			$this->viewBag['user'] = $user;
-			render();
+			$this->render();
 		}
 		else {
 			header('Location: ?path=/login');
