@@ -57,6 +57,8 @@ class LoginController extends Controller {
 			isset($_POST['resetCode']) && !empty($_POST['resetCode'])) {
 			$email = $_POST['email'];
 			$resetCode = $_POST['resetCode'];	
+
+			$this->render();
 		}	
 	}
 }
