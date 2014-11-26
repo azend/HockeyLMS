@@ -33,7 +33,7 @@ class LoginController extends Controller {
 		$um = new UserModel();
 		$user = $um->find($_POST['user']);
 		
-		if ($user) {
+		//if (isset($user) && $user) {
 			$r = rand(1000, 9999);
 
 			mail(
@@ -43,10 +43,10 @@ class LoginController extends Controller {
 			);
 
 			$_SESSION['passwordResetCode'] = $r;
-		}
-		else {
-			header('Location: ?path=/login');
-		}
+		//}
+		//else {
+		//	header('Location: ?path=/login');
+		//}
 	}
 
 	function resetPassword () {
