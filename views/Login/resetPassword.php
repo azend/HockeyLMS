@@ -78,12 +78,11 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="?path=/resetPassword" method="post">
-        <h2 class="form-signin-heading">Enter reset code</h2>
-	<p>Your reset code has been sent. Please enter it below.</p>
+      <form class="form-signin" role="form" action="?path=/completeResetPassword" method="post">
+        <h2 class="form-signin-heading">Enter new password</h2>
 	<input type="hidden" name="email" id="email" value="<?php echo $user->email; ?>" />
-        <label for="inputResetCode" class="sr-only">Reset code</label>
-        <input type="text" id="inputResetCode" name="resetCode" class="form-control" placeholder="Reset Code" required autofocus>
+        <label for="inputPassword" class="sr-only">Reset code</label>
+        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required autofocus>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Reset</button>
       </form>
     </div> <!-- /container -->

@@ -53,6 +53,10 @@ class LoginController extends Controller {
 	}
 
 	function resetPassword () {
-		
+		if (isset($_POST['email']) && !empty($_POST['email']) &&
+			isset($_POST['resetCode']) && !empty($_POST['resetCode'])) {
+			$email = $_POST['email'];
+			$resetCode = $_POST['resetCode'];	
+		}	
 	}
 }
