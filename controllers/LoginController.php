@@ -31,7 +31,7 @@ class LoginController extends Controller {
 
 	function forgotPassword () {
 		$um = new UserModel();
-		$user = $um->find($_POST['user']);
+		$user = $um->find($_POST['email']);
 		
 		//if (isset($user) && $user) {
 			$r = rand(1000, 9999);
