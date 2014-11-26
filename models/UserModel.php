@@ -13,7 +13,6 @@ class User {
 	public $username = '';
 	public $email = '';
 	public $passwordHash = '';
-	public $passwordSalt = '';
 	public $isActivated = false;
 	public $userRole = UserRoles::PARENT;
 }
@@ -37,6 +36,29 @@ class UserModel extends Model {
 		$stmt->execute(array(
 			':email' => $email
 		));
+
+		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+
+		$user = $stmt->fetch();
+
+		return $user;
+	}
+
+
+	function update($user) {
+		$stmt = $this->db->prepare('UPDATE Users SET username=:username, email=:email, passwordHash=:passwordHash, isActivated=:isActivated, userRole=:userRole WHERE userId=:userId');
+
+		$stmt->execute(array(
+			':userId' => $user->userId,
+			':username' => $user->username,
+			':email' => $user->email,
+			':passwordHash' => $user->passwordHash,
+			':isActivated' => $user->isActivated,
+			':userRole' => $user->userRole
+		));
+
+		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, passwordSalt, isActivated, userRole FROM Users WHERE userId = :userId LIMIT 1');
+		$stmt->execute(array(':userId' => $this->db->lastInsertId()));
 
 		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
 

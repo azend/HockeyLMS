@@ -28,4 +28,28 @@ class LoginController extends Controller {
 			header('Location: ?path=/login');
 		}
 	}
+
+	function forgotPassword () {
+		$um = new UserModel();
+		$user = $um->find($_POST['user']);
+		
+		if ($user) {
+			$r = rand(1000, 9999);
+
+			mail(
+				$user->email,
+				'Password reset',
+				'Your password reset code is '.$r.'.'
+			);
+
+			$_SESSION['passwordResetCode'] = $r;
+		}
+		else {
+			header('Location: ?path=/login');
+		}
+	}
+
+	function resetPassword () {
+
+	}
 }
