@@ -21,7 +21,7 @@ class UserModel extends Model {
 	function all () {
 		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, isActivated, userRole FROM Users');
 		$stmt->execute();
-		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+		$stmt->setFetchMode(PDO::FETCH_OBJ, 'User');
 
 		$users = array();
 		while($user =$stmt->fetch()) {
@@ -32,12 +32,12 @@ class UserModel extends Model {
 	}
 
 	function find($email) {
-		$stmt = $this->db->prepare('SELECT (userId, username, email, passwordHash, isActivated, userRole) FROM Users WHERE email = :email LIMIT 1');
+		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, isActivated, userRole FROM Users WHERE email = :email LIMIT 1');
 		$stmt->execute(array(
 			':email' => $email
 		));
 
-		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+		$stmt->setFetchMode(PDO::FETCH_OBJ, 'User');
 
 		$user = $stmt->fetch();
 
@@ -60,7 +60,7 @@ class UserModel extends Model {
 		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, passwordSalt, isActivated, userRole FROM Users WHERE userId = :userId LIMIT 1');
 		$stmt->execute(array(':userId' => $this->db->lastInsertId()));
 
-		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+		$stmt->setFetchMode(PDO::FETCH_OBJ, 'User');
 
 		$user = $stmt->fetch();
 
@@ -81,7 +81,7 @@ class UserModel extends Model {
 		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, passwordSalt, isActivated, userRole FROM Users WHERE userId = :userId LIMIT 1');
 		$stmt->execute(array(':userId' => $this->db->lastInsertId()));
 
-		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+		$stmt->setFetchMode(PDO::FETCH_OBJ, 'User');
 
 		$user = $stmt->fetch();
 
