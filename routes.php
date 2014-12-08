@@ -5,6 +5,7 @@ $routes = array(
 	array('path' => '/login', 'controller' => 'LoginController', 'action' => 'index', 'method' => 'get'),
 	array('path' => '/login', 'controller' => 'LoginController', 'action' => 'login', 'method' => 'post'),
 	array('path' => '/register', 'controller' => 'LoginController', 'action' => 'register', 'method' => 'get'),
+	array('path' => '/register', 'controller' => 'LoginController', 'action' => 'register', 'method' => 'post'),
 	array('path' => '/forgotPassword', 'controller' => 'LoginController', 'action' => 'forgotPassword', 'method' => 'post'),
 	array('path' => '/resetPassword', 'controller' => 'LoginController', 'action' => 'resetPassword', 'method' => 'post'),
 	array('path' => '/dashboard', 'controller' => 'DashboardController', 'action' => 'index', 'method' => 'get'),
