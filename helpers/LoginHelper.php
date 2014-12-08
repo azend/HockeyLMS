@@ -18,7 +18,7 @@ class LoginHelper {
 		$_SESSION['user'] = null;
 	}
 
-	function register($username, $password, $email) {
+	function register($username, $email, $password) {
 		$user = new User();
 		$user->username = $username;	
 		$user->email = $email;
