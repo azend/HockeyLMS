@@ -41,6 +41,8 @@ class UserModel extends Model {
 
 		$user = $stmt->fetch();
 
+		var_dump($user);
+
 		return $user;
 	}
 
