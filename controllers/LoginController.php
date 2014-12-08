@@ -35,8 +35,17 @@ class LoginController extends Controller {
 				isset($_POST['email']) && !empty($_POST['email']) &&
 				isset($_POST['password']) && !empty($_POST['password'])) {
 				
+				$username = $_POST['username'];
+				$email = $_POST['email'];
+				$password = $_POST['password'];
+				
 				// Register the user
+				$lh = new LoginHelper();
+				$user = $lh->register($username, $email, $password);
+
 				$this->viewBag['result'] = 'REGISTERED';
+				$this->viewBag['user'] = $user;
+				
 			}
 			else {
 				$this->viewBag['result'] = 'INVALID_PARAMS';

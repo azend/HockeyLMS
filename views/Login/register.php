@@ -79,6 +79,7 @@
     <div class="container">
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'REGISTERED') { ?>
       <h2>Registration successful</h2>
+      <p>Hi <?php echo $user->username; ?>. You're now registered for our service. Please wait while an adminstrator adds you to their team and league.</p>
       <?php } else if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'INVALID_PARAMS') { ?>
       <form class="form-register" role="form" action="?path=/register" method="post">
         <h2 class="form-register-heading">Please register</h2>
