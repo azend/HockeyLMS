@@ -77,7 +77,22 @@
   <body>
 
     <div class="container">
-
+      <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'REGISTERED') { ?>
+      <h2>Registration successful</h2>
+      <?php } else if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'INVALID_PARAMS') { ?>
+      <form class="form-register" role="form" action="?path=/login" method="post">
+        <h2 class="form-register-heading">Please register</h2>
+        <p class="bg-danger">Invalid parameters.</p>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div> <!-- /container -->
+      <?php } else { ?>
       <form class="form-register" role="form" action="?path=/login" method="post">
         <h2 class="form-register-heading">Please register</h2>
         <label for="inputUsername" class="sr-only">Username</label>
@@ -89,6 +104,8 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
     </div> <!-- /container -->
+      <?php } ?>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

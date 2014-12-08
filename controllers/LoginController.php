@@ -31,11 +31,18 @@ class LoginController extends Controller {
 
 	function register () {
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+			if (isset($_POST['username']) && !empty($_POST['username']) &&
+				isset($_POST['email']) && !empty($_POST['email']) &&
+				isset($_POST['password']) && !empty($_POST['password'])) {
+				
+				// Register the user
+				$this->viewBag['result'] = 'REGISTERED';
+			}
+			else {
+				$this->viewBag['result'] = 'INVALID_PARAMS';
+			}
 		}
-		else {
-			$this->render();
-		}
+		$this->render();
 	}
 
 	function forgotPassword () {
