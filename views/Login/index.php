@@ -78,6 +78,9 @@
 
     <div class="container">
 
+      <pre>
+<?php print_r($_SESSION['user']); ?>
+      </pre>
       <form class="form-signin" role="form" action="?path=/login" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
