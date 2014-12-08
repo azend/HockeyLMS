@@ -66,4 +66,25 @@ class UserModel extends Model {
 
 		return $user;
 	}
+
+	function create($user) {
+		$stmt = $this->db->prepare('INSERT INTO Users (username, email, passwordHash, isActivated, userRole) VALUES (:username, :email, :passwordHash, :isActivated, :userRole)');
+
+		$stmt->execute(array(
+			':username' => $user->username,
+			':email' => $user->email,
+			':passwordHash' => $user->passwordHash,
+			':isActivated' => $user->isActivated,
+			':userRole' => $user->userRole
+		));
+
+		$stmt = $this->db->prepare('SELECT userId, username, email, passwordHash, passwordSalt, isActivated, userRole FROM Users WHERE userId = :userId LIMIT 1');
+		$stmt->execute(array(':userId' => $this->db->lastInsertId()));
+
+		$stmt->setFetchMode(PDO::FETCH_CLASS, 'User');
+
+		$user = $stmt->fetch();
+
+		return $user;
+	}
 }

@@ -18,6 +18,22 @@ class LoginHelper {
 		$_SESSION['user'] = null;
 	}
 
+	function register($username, $password, $email) {
+		$user = new User();
+		$user->username = $username;	
+		$user->email = $email;
+		$user->passwordHash = create_hash($password);
+		$user->isActivated = false;
+		$user->userRole = UserRoles::PLAYER;
+
+		$um = new UserModel();
+		$user = $um->create($user);
+		
+		$_SESSION['user'] = $user;
+
+		return $user;
+	}	
+
 	function isLoggedIn() {
 		return isset($_SESSION['user']) && $_SESSION['user'] != null;
 	}
