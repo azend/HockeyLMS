@@ -1,7 +1,7 @@
 <?php
 
 // Aggregate all needed files to require
-$systemIncludes = array('config.php', 'controllers/Controller.php', 'models/Model.php');
+$systemIncludes = array('config.php', 'session.php', 'controllers/Controller.php', 'models/Model.php');
 
 $helperIncludes = glob("helpers/*.php");
 $controllerIncludes = glob("controllers/*.php");
