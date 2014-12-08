@@ -34,7 +34,7 @@ class LoginController extends Controller {
 
 		}
 		else {
-			render();
+			$this->render();
 		}
 	}
 
