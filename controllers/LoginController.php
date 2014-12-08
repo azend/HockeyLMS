@@ -29,6 +29,15 @@ class LoginController extends Controller {
 		}
 	}
 
+	function register () {
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+		}
+		else {
+			render();
+		}
+	}
+
 	function forgotPassword () {
 		$um = new UserModel();
 		$user = $um->find($_POST['email']);
