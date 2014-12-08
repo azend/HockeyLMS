@@ -80,7 +80,7 @@
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'REGISTERED') { ?>
       <h2>Registration successful</h2>
       <?php } else if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'INVALID_PARAMS') { ?>
-      <form class="form-register" role="form" action="?path=/login" method="post">
+      <form class="form-register" role="form" action="?path=/register" method="post">
         <h2 class="form-register-heading">Please register</h2>
         <p class="bg-danger">Invalid parameters.</p>
         <label for="inputUsername" class="sr-only">Username</label>
@@ -93,7 +93,7 @@
       </form>
     </div> <!-- /container -->
       <?php } else { ?>
-      <form class="form-register" role="form" action="?path=/login" method="post">
+      <form class="form-register" role="form" action="?path=/register" method="post">
         <h2 class="form-register-heading">Please register</h2>
         <label for="inputUsername" class="sr-only">Username</label>
         <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>
