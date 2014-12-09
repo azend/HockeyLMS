@@ -9,7 +9,7 @@ class DashboardController extends Controller {
 	}
 
 	function index () {
-		$this->viewBag['user'] = $lh->getUser();
+		$this->viewBag['user'] = $this->lh->getUser();
 		$this->render();
 	}
 
