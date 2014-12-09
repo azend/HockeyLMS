@@ -196,7 +196,7 @@ body {
     </nav>
 	<center><Label style >League Administrator</label></center>
 	<hr>
-	<center><img src="public/images/public/images/4.jpg" class="img-responsive" alt="Team Standings" height="750" width="750"></center>
+	<center><img src="public/images/4.jpg" class="img-responsive" alt="Team Standings" height="750" width="750"></center>
 
 
     <?php } else if ($user->userRole === UserRoles::COACH) { ?>
