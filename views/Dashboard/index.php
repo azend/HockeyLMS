@@ -142,6 +142,9 @@ body {
 
   <body>
 
+    <?php if ($user->userRole === UserRoles::SYSTEM_ADMIN) { ?>
+
+    
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -151,201 +154,195 @@ body {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand">Welcome username</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#">Sign Out</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
     </nav>
+	<center><Label style >System Administrator</label></center>
+	<hr>
+	<center><img src="../Images/load-memory.gif" class="img-responsive" alt="RAM" height="700" width="700"></center>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
+    <?php } else if ($user->userRole === UserRoles::LEAGUE_ADMIN) { ?>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Welcome username</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+		    <li><a href="#">Leagues</a></li>
+			<li><a href="#">Teams</a></li>
+			<li><a href="#">Schedules</a></li>
+			<li><a href="#">Standings</a></li>
+			<li><a href="#">Find Player or Coach</a></li>
+			<li><a href="#">Users</a></li>
+            <li><a href="#">Sign Out</a></li>
           </ul>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
+      </div>
+    </nav>
+	<center><Label style >League Administrator</label></center>
+	<hr>
+	<center><img src="../Images/4.jpg" class="img-responsive" alt="Team Standings" height="750" width="750"></center>
 
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </div>
 
-          <h2 class="sub-header">Section title</h2>
+    <?php } else if ($user->userRole === UserRoles::COACH) { ?>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Welcome username</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Roster</a></li>
+			<li><a href="#">Practice Schedule</a></li>
+			<li><a href="#">Game Schedule</a></li>
+			<li><a href="#">Statistics</a></li>
+			<li><a href="#">Standings</a></li>
+			<li><a href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	<center><Label style >Coach</label></center>
+	<hr>
+	<img src="../Images/3.png" class="img-responsive" alt="RAM" height="600" width="750" align="left">
+	<img src="../Images/2.png" class="img-responsive" alt="RAM" height="600" width="750" align="right">
+	
+	<br><br><br>
+          <center><h2 class="sub-header">Player Streaks</h2>
           <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-striped" width="8" height="15">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
+				  <th>Hot or Cold</th>
+                  <th>Player Name</th>
+                  <th>Position</th>
+                  <th>Point Streak</th>
+				  <th>+-</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
+                  <td>21</td>
+				  <td><img src="Hot.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
+                  <td>Jon Drupple</td>
+                  <td>Center</td>
+                  <td>12</td>
+                  <td>+4</td>
                 </tr>
                 <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
+                  <td>44</td>
+                  <td><img src="Hot.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
+                  <td>Harry Potter</td>
+                  <td>Defence</td>
+				  <td>3</td>
+                  <td>+12</td>
                 </tr>
                 <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
+                  <td>33</td>
+				  <td><img src="Cold.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
+                  <td>Austin Howell</td>
+                  <td>Left Wing</td>
+                  <td>0</td>
+                  <td>-5</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
+    </div></center>
+
+
+    <?php } else if ($user->userRole === UserRoles::PLAYER || $user->userRole === UserRoles::PARENT) { ?>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Welcome username</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Roster</a></li>
+			<li><a href="#">Practice Schedule</a></li>
+			<li><a href="#">Game Schedule</a></li>
+			<li><a href="#">Statistics</a></li>
+			<li><a href="#">Standings</a></li>
+			<li><a href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	<center><Label style >Player</label></center>
+	<hr>
+	<center><img src="../Images/1.png" class="img-responsive" alt="RAM" height="700" width="700" align="left"></center>
+    
+	<div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+       <tr>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" align="center">
+          <h1 class="page-header">Game Status</h1>
+          <div class="row placeholders">
+            <div class="placeholder">
+              <h3>You are playing on the 1st line tonight</h3>
+            </div>
+          </div>
+		 </div>
+		</tr>
+     </thead>
+    </table>
     </div>
+	
+	<div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+       <tr>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" align="center">
+          <h1 class="page-header">Coach Advice</h1>
+          <div class="row placeholders">
+            <div class="placeholder">
+			<h3>Lately you have been playing very well, just remember to stay out of the box, we can't afford to be short handed against the team tonight.</h3>
+            </div>
+          </div>
+		 </div>
+		</tr>
+     </thead>
+    </table>
+    </div>
+    
+    <?php } ?>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

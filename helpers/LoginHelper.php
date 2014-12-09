@@ -37,4 +37,8 @@ class LoginHelper {
 	function isLoggedIn() {
 		return isset($_SESSION['user']) && $_SESSION['user'] != null;
 	}
+
+	function getUser() {
+		return isset($_SESSION['user']) && $_SESSION['user'] != null ? $_SESSION['user'] : NULL;
+	}
 }

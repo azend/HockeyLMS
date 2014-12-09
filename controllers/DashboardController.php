@@ -5,11 +5,11 @@ class DashboardController extends Controller {
 
 	function __construct() {
 		$this->lh = new LoginHelper();
+		$this->checkLogin();
 	}
 
 	function index () {
-		$this->checkLogin();
-
+		$this->viewBag['user'] = $lh->getUser();
 		$this->render();
 	}
 
