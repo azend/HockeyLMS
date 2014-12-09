@@ -16,6 +16,7 @@ class LoginHelper {
 
 	function logout() {
 		$_SESSION['user'] = null;
+		unset($_SESSION['user']);
 	}
 
 	function register($username, $email, $password) {

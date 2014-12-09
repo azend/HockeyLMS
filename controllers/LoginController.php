@@ -29,6 +29,16 @@ class LoginController extends Controller {
 		}
 	}
 
+	function logout () {
+		$lh = new LoginHelper();
+
+		if ($lh->isLoggedIn()) {
+			$lh->logout();
+		}
+
+		header('Location: ?path=/login');
+	}
+
 	function register () {
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			if (isset($_POST['username']) && !empty($_POST['username']) &&
