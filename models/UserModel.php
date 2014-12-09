@@ -15,6 +15,12 @@ class User {
 	public $passwordHash = '';
 	public $isActivated = false;
 	public $userRole = UserRoles::PARENT;
+
+	// Data serialization
+	function __construct() {
+		$this->userId = intval($this->userId);
+		$this->userRole = intval($this->userRole);
+	}
 }
 
 class UserModel extends Model {
