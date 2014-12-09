@@ -7,10 +7,10 @@ class LoginHelper {
 		$user = $um->find($email);
 
 		if ($user) {
-			//if (validate_password($password, $user->passwordHash)) {
+			if (validate_password($password, $user->passwordHash)) {
 				// Logged in
 				$_SESSION['user'] = $user;
-			//}
+			}
 		}
 	}
 
