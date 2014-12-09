@@ -1,5 +1,7 @@
 <?php
 
+define('DEBUG_MODE', true);
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'nad');
 define('DB_USER', 'nad');

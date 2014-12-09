@@ -77,10 +77,12 @@
   <body>
 
     <div class="container">
-
+      <?php if (DEBUG_MODE) { ?>
       <pre>
-<?php var_dump($_SESSION['user']); ?>
+      <?php var_dump($_SESSION['user']); ?>
       </pre>
+      <?php } ?>
+
       <form class="form-signin" role="form" action="?path=/login" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
