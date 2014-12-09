@@ -165,7 +165,7 @@ body {
     </nav>
 	<center><Label style >System Administrator</label></center>
 	<hr>
-	<center><img src="../Images/load-memory.gif" class="img-responsive" alt="RAM" height="700" width="700"></center>
+	<center><img src="public/images/load-memory.gif" class="img-responsive" alt="RAM" height="700" width="700"></center>
 
     <?php } else if ($user->userRole === UserRoles::LEAGUE_ADMIN) { ?>
 
@@ -196,7 +196,7 @@ body {
     </nav>
 	<center><Label style >League Administrator</label></center>
 	<hr>
-	<center><img src="../Images/4.jpg" class="img-responsive" alt="Team Standings" height="750" width="750"></center>
+	<center><img src="public/images/public/images/4.jpg" class="img-responsive" alt="Team Standings" height="750" width="750"></center>
 
 
     <?php } else if ($user->userRole === UserRoles::COACH) { ?>
@@ -227,8 +227,8 @@ body {
     </nav>
 	<center><Label style >Coach</label></center>
 	<hr>
-	<img src="../Images/3.png" class="img-responsive" alt="RAM" height="600" width="750" align="left">
-	<img src="../Images/2.png" class="img-responsive" alt="RAM" height="600" width="750" align="right">
+	<img src="public/images/3.png" class="img-responsive" alt="RAM" height="600" width="750" align="left">
+	<img src="public/images/2.png" class="img-responsive" alt="RAM" height="600" width="750" align="right">
 	
 	<br><br><br>
           <center><h2 class="sub-header">Player Streaks</h2>
@@ -247,7 +247,7 @@ body {
               <tbody>
                 <tr>
                   <td>21</td>
-				  <td><img src="Hot.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
+				  <td><img src="public/images/Hot.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
                   <td>Jon Drupple</td>
                   <td>Center</td>
                   <td>12</td>
@@ -255,7 +255,7 @@ body {
                 </tr>
                 <tr>
                   <td>44</td>
-                  <td><img src="Hot.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
+                  <td><img src="public/images/Hot.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
                   <td>Harry Potter</td>
                   <td>Defence</td>
 				  <td>3</td>
@@ -263,7 +263,7 @@ body {
                 </tr>
                 <tr>
                   <td>33</td>
-				  <td><img src="Cold.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
+				  <td><img src="public/images/Cold.png" class="img-responsive" alt="Hot" height="48" width="48" align="center"></td>
                   <td>Austin Howell</td>
                   <td>Left Wing</td>
                   <td>0</td>
@@ -305,7 +305,7 @@ body {
     </nav>
 	<center><Label style >Player</label></center>
 	<hr>
-	<center><img src="../Images/1.png" class="img-responsive" alt="RAM" height="700" width="700" align="left"></center>
+	<center><img src="public/images/1.png" class="img-responsive" alt="RAM" height="700" width="700" align="left"></center>
     
 	<div class="table-responsive">
     <table class="table table-striped">
@@ -340,7 +340,7 @@ body {
      </thead>
     </table>
     </div>
-    
+
     <?php } ?>
 
 
