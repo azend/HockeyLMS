@@ -158,7 +158,7 @@ body {
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="?path=/logout">Sign Out</a></li>
+            <li><a href="<?php echo UrlHelper::genUrl('logout'); ?>">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -189,7 +189,7 @@ body {
 			<li><a href="#">Standings</a></li>
 			<li><a href="#">Find Player or Coach</a></li>
 			<li><a href="#">Users</a></li>
-            <li><a href="?path=/logout">Sign Out</a></li>
+            <li><a href="<?php echo UrlHelper::genUrl('logout'); ?>">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -220,7 +220,7 @@ body {
 			<li><a href="#">Game Schedule</a></li>
 			<li><a href="#">Statistics</a></li>
 			<li><a href="#">Standings</a></li>
-			<li><a href="?path=/logout">Sign Out</a></li>
+			<li><a href="<?php echo UrlHelper::genUrl('logout'); ?>">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -298,7 +298,7 @@ body {
 			<li><a href="#">Game Schedule</a></li>
 			<li><a href="#">Statistics</a></li>
 			<li><a href="#">Standings</a></li>
-			<li><a href="?path=/logout">Sign Out</a></li>
+			<li><a href="<?php echo UrlHelper::genUrl('logout'); ?>">Sign Out</a></li>
           </ul>
         </div>
       </div>

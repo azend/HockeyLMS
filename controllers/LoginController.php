@@ -22,10 +22,10 @@ class LoginController extends Controller {
 		$lh->login($_POST['email'], $_POST['password']);
 
 		if ($lh->isLoggedIn()) {
-			header('Location: ?path=/dashboard');
+			header('Location: ' . UrlHelper::genUrl('dashboard'));
 		}
 		else {
-			header('Location: ?path=/login');
+			header('Location: ' . UrlHelper::genUrl('login'));
 		}
 	}
 
@@ -36,7 +36,7 @@ class LoginController extends Controller {
 			$lh->logout();
 		}
 
-		header('Location: ?path=/login');
+		header('Location: ' . UrlHelper::genUrl('login'));
 	}
 
 	function register () {
@@ -83,7 +83,7 @@ class LoginController extends Controller {
 			$this->render();
 		}
 		else {
-			header('Location: ?path=/login');
+			header('Location: ' . UrlHelper::genUrl('login'));
 		}
 	}
 

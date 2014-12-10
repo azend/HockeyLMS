@@ -78,7 +78,7 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="?path=/completeResetPassword" method="post">
+      <form class="form-signin" role="form" action="<?php echo UrlHelper::genUrl('completeResetPassword'); ?>" method="post">
         <h2 class="form-signin-heading">Enter new password</h2>
 	<input type="hidden" name="email" id="email" value="<?php echo $user->email; ?>" />
         <label for="inputPassword" class="sr-only">Reset code</label>

@@ -83,7 +83,7 @@
       </pre>
       <?php } ?>
 
-      <form class="form-signin" role="form" action="?path=/login" method="post">
+      <form class="form-signin" role="form" action="<?php echo UrlHelper::genUrl('login'); ?>" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
@@ -97,7 +97,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
       <hr>
-      <form class="form-signin" role="form" action="?path=/forgotPassword" method="post">
+      <form class="form-signin" role="form" action="<?php echo UrlHelper::genUrl('forgotPassword'); ?>" method="post">
         <h2 class="form-signin-heading">Forgotten password?</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>

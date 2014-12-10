@@ -81,7 +81,7 @@
       <h2>Registration successful</h2>
       <p>Hi <?php echo $user->username; ?>. You're now registered for our service. Please wait while an adminstrator adds you to their team and league.</p>
       <?php } else if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'INVALID_PARAMS') { ?>
-      <form class="form-register" role="form" action="?path=/register" method="post">
+      <form class="form-register" role="form" action="<?php echo UrlHelper::genUrl('register'); ?>" method="post">
         <h2 class="form-register-heading">Please register</h2>
         <p class="bg-danger">Invalid parameters.</p>
         <label for="inputUsername" class="sr-only">Username</label>
@@ -94,7 +94,7 @@
       </form>
     </div> <!-- /container -->
       <?php } else { ?>
-      <form class="form-register" role="form" action="?path=/register" method="post">
+      <form class="form-register" role="form" action="<?php echo UrlHelper::genUrl('register'); ?>" method="post">
         <h2 class="form-register-heading">Please register</h2>
         <label for="inputUsername" class="sr-only">Username</label>
         <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>

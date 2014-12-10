@@ -15,7 +15,7 @@ class DashboardController extends Controller {
 
 	private function checkLogin() {
 		if (!$this->lh->isLoggedIn()) {
-			header('Location: ?path=/login');
+			header('Location: ' . UrlHelper::genUrl('login'));
 			die();
 		}
 	}
