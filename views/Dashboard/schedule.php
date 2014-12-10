@@ -144,7 +144,7 @@ body {
 
   <body>
 
-    
+   <div id="calendar"></div> 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
