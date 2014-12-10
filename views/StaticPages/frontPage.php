@@ -52,7 +52,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333 url('public/images/empty_net_bg.jpg') no-repeat top center;
+  background: #333 url('public/images/empty_net_bg.jpg') no-repeat top center;
 }
 body {
   color: #fff;
