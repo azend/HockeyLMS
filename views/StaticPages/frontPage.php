@@ -214,18 +214,17 @@ body {
               <h3 class="masthead-brand">HockeyMS</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="?path=/login">Login</a></li>
+                  <li class="active"><a href="./">Home</a></li>
+		  <li><a href="<?php echo UrlHelper::genUrl('login'); ?>">Login</a></li>
                 </ul>
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">HockeyMS the best place to manage your hockey league.</p>
             <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+	    <a href="<?php echo UrlHelper::genUrl('register'); ?>" class="btn btn-lg btn-default">Register</a>
             </p>
           </div>
 

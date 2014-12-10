@@ -2,6 +2,8 @@
 
 define('DEBUG_MODE', true);
 
+debug('REWRITE_ENABLED', true);
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'nad');
 define('DB_USER', 'nad');
