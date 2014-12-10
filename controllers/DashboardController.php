@@ -13,6 +13,18 @@ class DashboardController extends Controller {
 		$this->render();
 	}
 
+	function schedule () {
+		$user = $this->lh->getUser();
+
+		if ($user->userRole === UserRoles::COACH) {
+			$this->viewBag['user'] = $user;
+			$this->render();
+		}
+		else {
+			header('Location: ' . UrlHelper::genUrl('dashboard'));
+		}
+	}
+
 	private function checkLogin() {
 		if (!$this->lh->isLoggedIn()) {
 			header('Location: ' . UrlHelper::genUrl('login'));
