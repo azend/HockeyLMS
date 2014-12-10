@@ -52,8 +52,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: #333 url('public/images/empty_net_bg.jpg') no-repeat top center;
-  background-size: cover;
+  background: #333 url('public/images/green_dust_scratch.png') repeat;
 }
 body {
   color: #fff;
