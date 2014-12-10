@@ -80,6 +80,7 @@
       <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'REGISTERED') { ?>
       <h2>Registration successful</h2>
       <p>Hi <?php echo $user->username; ?>. You're now registered for our service. Please wait while an adminstrator adds you to their team and league.</p>
+      <a href="<?php echo UrlHelper::genUrl('login'); ?>">Go log in</a>
       <?php } else if ($_SERVER['REQUEST_METHOD'] === 'POST' && $result === 'INVALID_PARAMS') { ?>
       <form class="form-register" role="form" action="<?php echo UrlHelper::genUrl('register'); ?>" method="post">
         <h2 class="form-register-heading">Please register</h2>
@@ -91,7 +92,6 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-	<a href="<?php echo UrlHelper::genUrl('login'); ?>">Go log in</a>
       </form>
     </div> <!-- /container -->
       <?php } else { ?>
@@ -104,7 +104,6 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-	<a href="<?php echo UrlHelper::genUrl('login'); ?>">Go log in</a>
       </form>
     </div> <!-- /container -->
       <?php } ?>
