@@ -1,15 +1,7 @@
 <?php
 
 class StaticPagesController extends Controller {
-	function systemHome () {
-
-	}
-
-	function leagueHome () {
-
-	}
-
-	function teamHome () {
-
+	function frontPage() {
+		$this->render();
 	}
 }

@@ -10,7 +10,7 @@ $routes = array(
 	array('path' => '/forgotPassword', 'controller' => 'LoginController', 'action' => 'forgotPassword', 'method' => 'post'),
 	array('path' => '/resetPassword', 'controller' => 'LoginController', 'action' => 'resetPassword', 'method' => 'post'),
 	array('path' => '/dashboard', 'controller' => 'DashboardController', 'action' => 'index', 'method' => 'get'),
-	'default' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get'),
+	'default' => array( 'controller' => 'StaticPagesController', 'action' => 'frontPage', 'method' => 'get'),
 	'error' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get')
 
 );
