@@ -53,6 +53,7 @@ html,
 body {
   height: 100%;
   background: #333 url('public/images/empty_net_bg.jpg') no-repeat top center;
+  background-size: cover;
 }
 body {
   color: #fff;
