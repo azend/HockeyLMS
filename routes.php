@@ -12,7 +12,7 @@ $routes = array(
 	array('path' => '/dashboard', 'controller' => 'DashboardController', 'action' => 'index', 'method' => 'get'),
 	array('path' => '/schedule', 'controller' => 'DashboardController', 'action' => 'schedule', 'method' => 'get'),
 	'default' => array( 'controller' => 'StaticPagesController', 'action' => 'frontPage', 'method' => 'get'),
-	'error' => array( 'controller' => 'HelloWorldController', 'action' => 'index', 'method' => 'get')
+	'error' => array( 'controller' => 'StaticPagesController', 'action' => 'error', 'method' => 'get')
 
 );
 
