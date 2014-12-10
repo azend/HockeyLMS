@@ -91,6 +91,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+	<a href="<?php echo UrlHelper::genUrl('login'); ?>">Go log in</a>
       </form>
     </div> <!-- /container -->
       <?php } else { ?>
@@ -103,6 +104,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+	<a href="<?php echo UrlHelper::genUrl('login'); ?>">Go log in</a>
       </form>
     </div> <!-- /container -->
       <?php } ?>
