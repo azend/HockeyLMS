@@ -1,6 +1,6 @@
 <?php
 
-define('DEBUG_MODE', true);
+define('DEBUG_MODE', false);
 
 define('REWRITE_ENABLED', true);
 
